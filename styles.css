@@ -71,5 +71,10 @@ div.primary {
   padding: 5px;
   margin-top: 5em;
   border: 2px solid black;
+}
 
+.hours {
+  text-align: center;
+  padding: 5px;
+  border: 1px solid black;
 }
