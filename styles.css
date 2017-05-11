@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-body {
-  padding: 10px;
-}
-=======
+
 /*start of basic CSS */
 >>>>>>> bc01d17ae8c2f48de23de8985dc35a007b390b03
 
@@ -49,39 +45,4 @@ body {
 footer {
     margin: 50px 0;
 }
-
-header {
-    font-size: 40px;
-    text-align: center;
-    padding: 15px;
-    border-bottom: 1px solid black;
-}
-
-.lead {
-    font-size: 150px;
-    text-align: center;
-}
 /*End of basic CSS*/
-
-/*the main div that surrounds the index page*/
-div.primary {
-    width: 80%;
-    border: 1px solid black;
-    padding: 25px;
-    margin: auto;
-    height: 2500%;
-}
-
-.num {
-  /*border: 1px solid black;*/
-  text-align: center;
-  font-size: 2200%;
-}
-
-.bx {
-  text-align: center;
-  padding: 5px;
-  margin-top: 5em;
-  border: 2px solid black;
-
-}
