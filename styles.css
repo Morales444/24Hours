@@ -1,4 +1,10 @@
+<<<<<<< HEAD
+body {
+  padding: 10px;
+}
+=======
 /*start of basic CSS */
+>>>>>>> bc01d17ae8c2f48de23de8985dc35a007b390b03
 
 .slide-image {
     width: 100%;
@@ -48,6 +54,12 @@ header {
     font-size: 40px;
     text-align: center;
     padding: 15px;
+    border-bottom: 1px solid black;
+}
+
+.lead {
+    font-size: 150px;
+    text-align: center;
 }
 /*End of basic CSS*/
 
