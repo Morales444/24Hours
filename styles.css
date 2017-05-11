@@ -1,7 +1,4 @@
-body {
-    padding-top: 70px;
-    /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-}
+/*start of basic CSS */
 
 .slide-image {
     width: 100%;
@@ -49,4 +46,28 @@ footer {
 
 header {
     font-size: 40
+}
+/*End of basic CSS*/
+
+/*the main div that surrounds the index page*/
+div.primary {
+    width: 80%;
+    border: 1px solid black;
+    padding: 25px;
+    margin: auto;
+    height: 2500%;
+}
+
+.num {
+  /*border: 1px solid black;*/
+  text-align: center;
+  font-size: 2200%;
+}
+
+.bx {
+  text-align: center;
+  padding: 5px;
+  margin-top: 5em;
+  border: 2px solid black;
+
 }
