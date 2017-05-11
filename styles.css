@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+=======
+body {
+  padding: 10px;
+}
+
+>>>>>>> 7085714e53a54f33dd95a8373d8efd3598fdcf1a
+>>>>>>> 094223d0205b63d785b89283a25354ff1f271dde
 /*start of basic CSS */
 
 .slide-image {
@@ -43,19 +54,9 @@
 footer {
     margin: 50px 0;
 }
-
-header {
-    font-size: 40px;
-    text-align: center;
-    padding: 15px;
-    border-bottom: 1px solid black;
-}
-
-.lead {
-    font-size: 150px;
-    text-align: center;
-}
 /*End of basic CSS*/
+<<<<<<< HEAD
+=======
 
 /*the main div that surrounds the index page*/
 div.primary {
@@ -98,3 +99,4 @@ div.primary {
   /*border: 1px solid black;*/
   font-size: 50px;
 }
+>>>>>>> 7085714e53a54f33dd95a8373d8efd3598fdcf1a
