@@ -1,6 +1,5 @@
 body {
-    padding-top: 70px;
-    /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+  padding: 10px;
 }
 
 .slide-image {
@@ -51,4 +50,10 @@ header {
     font-size: 40px;
     text-align: center;
     padding: 15px;
+    border-bottom: 1px solid black;
+}
+
+.lead {
+    font-size: 150px;
+    text-align: center;
 }
