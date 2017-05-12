@@ -9,6 +9,7 @@ header {
 .lead {
     font-size: 150px;
     text-align: center;
+    text-decoration: none;
 }
 
 body {

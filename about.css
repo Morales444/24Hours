@@ -1,0 +1,7 @@
+@keyframes background {
+  0% {background-image: url("images/boy.png");}
+  25% {background-image: url("images/city1.jpg");}
+  50% {background-image: url("images/brick.jpg");}
+  75% {background-image: url("images/watchback2.jpg");}
+  100% {background-image: url("images/boy.png");}
+}
