@@ -8,9 +8,10 @@
 
 body {
     padding-top: 50px;
-    animation-name: background;
+    /*animation-name: background;
     animation-duration: 10s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite;*/
+    background-image: url("images/boy.jpg");
     background-size: 100%;
 }
 
