@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
-body {
-  padding: 10px;
-}
-
->>>>>>> 7085714e53a54f33dd95a8373d8efd3598fdcf1a
->>>>>>> 094223d0205b63d785b89283a25354ff1f271dde
 /*start of basic CSS */
 
 .slide-image {
@@ -71,32 +61,3 @@ div.primary {
   text-align: center;
   font-size: 2200%;
 }
-
-/*the css for the 4 boxes linking to the 4 product pages;*/
-.bx {
-  text-align: center;
-  padding: 5px;
-  margin-top: 1.5em;
-  padding-top: 45px;
-  font-size: 25px;
-  margin-bottom: 1em;
-  border: 2px solid black;
-  height: 5em;
-}
-
-.bx2 {
-  text-align: center;
-  padding: 5px;
-  padding-top: 45px;
-  font-size: 25px;
-  margin-top: 1em;
-  border: 2px solid black;
-  height: 5em;
-}
-
-.hours {
-  padding-left: 12em;
-  /*border: 1px solid black;*/
-  font-size: 50px;
-}
->>>>>>> 7085714e53a54f33dd95a8373d8efd3598fdcf1a
