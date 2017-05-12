@@ -13,11 +13,13 @@ div.primary {
     height: 2500%;
     /*background-color: #FFFF;*/
 }
-
+/*24 Logo */
 .num {
   /*border: 1px solid black;*/
   text-align: center;
   font-size: 2200%;
+  /*color: #91bed8;*/
+  color: black;
 }
 
 .bx {
@@ -30,7 +32,7 @@ div.primary {
 /*the main div that surrounds the index page*/
 div.primary {
     width: 71%;
-    border: 1px solid black;
+    border: 6px solid #91bed8;
     padding: 25px;
     margin: auto;
 }
@@ -39,6 +41,7 @@ div.primary {
   /*border: 1px solid black;*/
   text-align: center;
   font-size: 2200%;
+  color: gray;
 }
 
 /*the css for the 4 boxes linking to the 4 product pages;*/
@@ -47,31 +50,53 @@ div.primary {
   padding: 5px;
   margin-top: .2em;
   padding-top: 45px;
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 1em;
-  border: 2px solid black;
+  border: 2px solid #91bed8;
   height: 5em;
   background-color: #F4F4F4;
+  font-family: orator std ;
+  color: #3f3f3f;
+
+
 }
 
 .bx2 {
   text-align: center;
   padding: 5px;
   padding-top: 45px;
-  font-size: 30px;
+  font-size: 25px;
   margin-top: 1em;
-  border: 2px solid black;
+  border: 2px solid #91bed8;
   height: 5em;
-  background-color:  #F4F4F4;
-}
+  background-color: #F4F4F4;
+  font-family:orator std ;
+  color: #3f3f3f;
 
-a {
-  color: black;
+
+
 }
 
 .hours {
   padding-left: 11em;
   /*border: 1px solid black;*/
   font-size: 50px;
-  letter-spacing: 15px;
+  letter-spacing: 18px;
+  font-family: orator std ;
+}
+/*hours logo*/
+.hours{
+  /*color:#91bed8;*/
+  color: gray;
+}
+/*changes the footer for the copyright*/
+footer{
+  color: white;
+  font-family: orator std ;
+  letter-spacing: 8px;
+}
+/*changes the color of the about us and contact us linkes*/
+.footer {
+  color: white;
+  font-family: orator std ;
 }
