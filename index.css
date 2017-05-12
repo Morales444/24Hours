@@ -75,3 +75,47 @@ a {
   font-size: 50px;
   letter-spacing: 15px;
 }
+
+
+footer {
+  text-align: center;
+}
+
+
+
+/*Media Queries*/
+
+/*Extra small devices*/
+@media (max-width: 400px) {
+  .num {
+    display: none;
+  }
+}
+
+/*Small devices (landscape phones, 576px)*/
+@media (max-width: 583px) {
+  .num {
+    font-size: 1500%;
+  }
+  .hours {
+    display: none;
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (max-width: 768px) {
+  .hours {
+    padding-left: 3em;
+    font-size: 30px;
+  }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+}
