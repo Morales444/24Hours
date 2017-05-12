@@ -48,6 +48,32 @@ footer {
 
 
 
+/*the main div that surrounds the index page*/
+div.primary {
+    width: 80%;
+    /*border: 1px solid black;*/
+    padding: 25px;
+    margin: auto;
+}
+
+.num {
+  /*border: 1px solid black;*/
+  text-align: center;
+  font-size: 2200%;
+}
+
+footer {
+  display: block;
+  padding-top: 25px;
+  text-align: center;
+}
+
+a.footer {
+  border-left: 1px solid gray;
+  padding-left: 5px;
+}
+
+
 p.lead {
   text-decoration: none;
   color: black;
