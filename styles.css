@@ -52,7 +52,7 @@ footer {
 /*the main div that surrounds the index page*/
 div.primary {
     width: 80%;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     padding: 25px;
     margin: auto;
 }
