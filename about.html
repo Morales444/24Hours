@@ -2,70 +2,103 @@
 <html>
 
 <head>
-    <title>About 24Hours</title>
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
-    <link rel="stylesheet" media="(max-width: 1220px)" type="text/css" href="/assets/css/style-narrow.css" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <meta name="description" content="Live demo of Template 10, a free website template." />
-    <meta name="keywords" content="templates themes wp phpbb blogger joomla website design free download" />
-    <script src="/assets/js/jquery.min.js"></script>
-    <script>
-        $(function() {
-            var w = $(window),
-                df = $('#demoiframe'),
-                u = '/support-files/data/content/templates/demos/full/';
-            n = '61ded6009a4b9b7ee25452238b7a84706b59b6ede73f7296b9067abd53edf7f5989f2b8c2aeec08c59d3a6acadd2ca41beef8235f465a4025e7bd7d0ab134e0c';
-            df.attr('src', df.data('src') ? df.data('src') : (u.substring(19, 44) + n.split('').reverse().join('') + '/'));
-            df.bind('doResize', function() {
-                df.height(w.height() - 153);
-            }).trigger('doResize');
-            w.resize(function() {
-                df.trigger('doResize');
-            });
-        });
-    </script>
+    <title>About 24hours</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:700,300" rel="stylesheet" type="text/css">
+
+    <style>
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        
+
+        #wrapper {
+            -webkit-overflow-scrolling: touch;
+            display: -moz-flex;
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            -moz-flex-direction: column;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -moz-align-items: stretch;
+            -webkit-align-items: stretch;
+            -ms-align-items: stretch;
+            align-items: stretch;
+            -moz-justify-content: flex-end;
+            -webkit-justify-content: flex-end;
+            -ms-justify-content: flex-end;
+            justify-content: flex-end;
+            min-height: 100vh;
+            position: relative;
+            z-index: 2;
+            padding: 2.25rem 0 0 0;
+        }
+
+        #main>.inner {
+            overflow-x: hidden;
+            position: relative;
+            z-index: 1;
+            padding: 3rem 2.375rem;
+            max-width: 100%;
+            width: 46rem;
+        }
+
+
+        #text03 br+br {
+            margin-top: 1.2rem;
+        }
+
+        #text03 {
+            letter-spacing: 0.275rem;
+            width: calc(100% + 0.275rem);
+            font-size: 0.625em;
+            line-height: 2;
+            font-weight: 300;
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            text-transform: uppercase;
+            color: #FFFFFF;
+            font-family: 'Oxygen';
+            letter-spacing: 0.45rem;
+            width: calc(100% + 0.45rem);
+            font-size: 1.375em;
+            line-height: 1.375;
+            font-weight: 700;
+        }
+
+
+
+
+    </style>
 </head>
 
-<body class="demo">
-    <div id="header">
-        <div class="info">
-            <h1>Template 10 by <a href="/profiles/carrd-4148710907233704/">Carrd</a></h1>
-            <p>"A one-page identity-style template with a ..."</p>
+<body class="is-ready">
+    <div id="wrapper">
+        <div id="main">
+            <div class="inner">
+                <h1 id="text02">About us</h1>
+                <p id="text03">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
         </div>
-        <div class="ad">
-            <!-- BuySellAds Zone Code -->
-            <div id="bsap_1280204" class="bsarocks bsap_2106fc248a33c095ffe3b0c20f67fe9b"></div>
-            <!-- End BuySellAds Zone Code -->
-        </div>
-        <ul class="controls">
-            <li><a href="/download/free-website-template/template-10-665924266/download/" class="button button1">Launch Site Builder</a></li>
-            <li><a href="/download/free-website-template/template-10-665924266/" class="button button2">Back</a></li>
-        </ul>
-    </div><iframe id="demoiframe" src="" data-src="https://template10.carrd.co"></iframe>
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-1071997-11']);
-        _gaq.push(['_trackPageview']);
-        (function() {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
-    <!-- BuySellAds.com Ad Code -->
-    <script type="text/javascript">
-        (function() {
-            var bsa = document.createElement('script');
-            bsa.type = 'text/javascript';
-            bsa.async = true;
-            bsa.src = 'https://s3.buysellads.com/ac/bsa.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bsa);
-        })();
-    </script>
-    <!-- End BuySellAds.com Ad Code -->
+        <footer>
+          <hr />
+          Copyright &copy; 2017 24Hours, All Rights Reserved.
+          <a href="about.html" class="footer">About Us</a>
+          <a href="contact.html" class="footer">Contact Us</a>
+        </footer>
+    </div>
+
 </body>
 
 </html>

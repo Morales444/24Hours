@@ -1,7 +1,15 @@
 @keyframes background {
-  0% {background-image: url("images/boy.png");}
+  0% {background-image: url("images/boy.jpg");}
   25% {background-image: url("images/city1.jpg");}
   50% {background-image: url("images/brick.jpg");}
   75% {background-image: url("images/watchback2.jpg");}
-  100% {background-image: url("images/boy.png");}
+  100% {background-image: url("images/boy.jpg");}
+}
+
+html {
+  animation-name: background;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  background-size:cover;
+
 }
