@@ -12,6 +12,7 @@ body {
     animation-duration: 10s;
     animation-iteration-count: infinite;*/
     background-image: url("images/boy.jpg");
+    background-color: #cccccc;
     background-size: 100%;
 }
 
@@ -93,7 +94,7 @@ div.primary {
 }
 
 .hours {
-  padding-left: 11em;
+  padding-left: 10em;
   /*border: 1px solid black;*/
   font-size: 50px;
   letter-spacing: 18px;
@@ -126,36 +127,53 @@ footer {
 /*Media Queries*/
 
 /*Extra small devices*/
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .num {
     display: none;
   }
-}
 
-/*Small devices (landscape phones, 576px)*/
-@media (max-width: 583px) {
-  .num {
-    font-size: 1500%;
-  }
-  .hours {
-    display: none;
-  }
 }
 
 /*Medium devices (tablets, 768px and up)*/
-@media (max-width: 768px) {
+@media (max-width: 990px) {
   .hours {
-    padding-left: 3em;
-    font-size: 30px;
+    display: none;
+  }
+  .num {
+    font-size: 1500%;
+  }
+  body {
+    background-image: none;
+    background-color: #36454f;
   }
 }
 
 /*Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
+@media (max-width: 1290px) {
+  .hours {
+    margin-left: 3em;
+    font-size: 35px;
+  }
+}
 
+@media (max-width: 1156px) {
+  .hours {
+    font-size: 33px;
+  }
+}
+
+@media (max-width: 1108px) {
+  .hours {
+    font-size: 28.5px;
+  }
+  .num {
+    font-size: 1900%;
+  }
 }
 
 /*Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {
-
+@media (max-width: 1350px) {
+  .hours {
+    padding-left: 9.1em;
+  }
 }

@@ -46,6 +46,15 @@ footer {
 }
 /*End of basic CSS*/
 
+/*changes the footer for the copyright*/
+footer{
+  font-family: orator std ;
+  letter-spacing: 8px;
+}
+/*changes the color of the about us and contact us linkes*/
+.footer {
+  font-family: orator std ;
+}
 
 
 /*the main div that surrounds the index page*/
@@ -70,7 +79,7 @@ footer {
 
 a.footer {
   border-left: 1px solid gray;
-  padding-left: 5px;
+  padding-left: 10px;
 }
 
 

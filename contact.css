@@ -1,0 +1,99 @@
+
+/*general styles for the page*/
+
+body {
+  padding-top: 50px;
+
+}
+
+
+.primary {
+  width: 71%;
+  border: 6px solid #91bed8;
+  /*border: 1px solid black;*/
+  padding: 25px;
+  margin: auto;
+  /*background-color: white;*/
+}
+
+form {
+  padding-bottom: 30px;
+}
+
+/*the styles for the first colum in the contact page*/
+
+label{
+  margin: 0 60px 0 0;
+}
+
+span {
+  display: block;
+}
+
+input {
+  border-radius: 20px;
+  border: 1px solid #91bed8;
+  padding-left: 10px;
+  display: block;
+  background-color: #91bed8;
+}
+
+h6 {
+  color: red;
+}
+
+textarea {
+  border-radius: 20px;
+  border: 1px solid #91bed8;
+  padding-left: 10px;
+  background-color: #91bed8;
+}
+
+/*the styles for the second colum in the contact page*/
+
+.second {
+  padding-top: 10px;
+  background-color: #cccccc;
+  height: 28em;
+}
+
+img {
+  height: 30px;
+  width: 30px;
+}
+
+/*changes to th footer styles*/
+
+.footer {
+  color: white;
+}
+
+footer {
+  color: white;
+}
+
+/*media query*/
+
+@media (max-width: 1200px) {
+  textarea {
+    width: 100%;
+  }
+}
+
+/*The code for the animation in the background*/
+
+@keyframes background {
+  0% {background-image: url("images/boy.jpg");}
+  25% {background-image: url("images/city1.jpg");}
+  50% {background-image: url("images/brick.jpg");}
+  75% {background-image: url("images/watchback2.jpg");}
+  100% {background-image: url("images/boy.jpg");}
+}
+
+body {
+  animation-name: background;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  background-size:cover;
+
+}
