@@ -115,6 +115,11 @@ footer {
   text-align: center;
 }
 
+
+
+a {
+  text-decoration: none;
+}
 /*media query*/
 
 @media only screen and (max-width: 480px){

@@ -16,6 +16,10 @@ html {
   background-size:cover;
 }
 
+body {
+  background-image: none;
+}
+
 /*changes to th footer styles*/
 
 .footer {
