@@ -1,3 +1,6 @@
+
+/*styles for the animation in the background*/
+
 @keyframes background {
   0% {background-image: url("images/boy.jpg");}
   25% {background-image: url("images/city1.jpg");}
@@ -11,5 +14,14 @@ html {
   animation-duration: 10s;
   animation-iteration-count: infinite;
   background-size:cover;
+}
 
+/*changes to th footer styles*/
+
+.footer {
+  color: white;
+}
+
+footer {
+  color: white;
 }

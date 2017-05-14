@@ -41,9 +41,9 @@
     color: #333;
 }
 
-footer {
+/*footer {
     margin: 50px 0;
-}
+}*/
 /*End of basic CSS*/
 
 /*changes the footer for the copyright*/
@@ -54,6 +54,7 @@ footer{
 /*changes the color of the about us and contact us linkes*/
 .footer {
   font-family: orator std ;
+  text-decoration: none;
 }
 
 
