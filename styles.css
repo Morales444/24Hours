@@ -1,14 +1,25 @@
 
 /*start of basic CSS */
-
+body{
+  background-image: url("images/city1.jpg");
+  background-size: 100%;
+}
 .slide-image {
     width: 100%;
 }
-
 .carousel-holder {
     margin-bottom: 30px;
 }
+.list-group {
+  font-family: orator std;
+  letter-spacing: 8px;
+  font-size: 15px;
 
+}
+.fitbitbackground{
+  background-image: url("images/brick.jpg");
+  background-size: 100%;
+}
 .carousel-control, .item {
     border-radius: 4px;
 }
@@ -16,6 +27,7 @@
 .caption {
     height: 130px;
     overflow: hidden;
+
 }
 
 .caption h4 {
@@ -30,10 +42,12 @@
     padding-right: 10px;
     padding-left: 10px;
     color: #d17581;
+    border: 1px double black;
 }
 
 .thumbnail {
     padding: 10px;
+    border: 2px solid gray;
 }
 
 .thumbnail .caption-full {
@@ -76,6 +90,7 @@ footer {
   display: block;
   padding-top: 25px;
   text-align: center;
+  color: white;
 }
 
 a.footer {
@@ -91,4 +106,8 @@ p.lead {
 
 a:hover {
   text-decoration: none;
+}
+header{
+  font-family: orator std ;
+  letter-spacing: 18px;
 }
