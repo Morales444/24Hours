@@ -16,10 +16,10 @@ body{
   font-size: 15px;
 
 }
-.fitbitbackground{
+/*.fitbitbackground{
   background-image: url("images/brick.jpg");
   background-size: 100%;
-}
+}*/
 .carousel-control, .item {
     border-radius: 4px;
 }
