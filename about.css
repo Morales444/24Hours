@@ -8,14 +8,12 @@
   75% {background-image: url("images/watchback2.jpg");}
   100% {background-image: url("images/boy.jpg");}
 }
-
 html {
   animation-name: background;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   background-size:cover;
 }
-
 body {
   background-image: none;
 }
@@ -25,7 +23,6 @@ body {
 .footer {
   color: white;
 }
-
 footer {
   color: white;
 }

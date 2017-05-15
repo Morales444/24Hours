@@ -1,16 +1,5 @@
-/*@keyframes background {
-  0% {background-image: url("images/boy.jpg");}
-  25% {background-image: url("images/city1.jpg");}
-  50% {background-image: url("images/brick.jpg");}
-  75% {background-image: url("images/watchback2.jpg");}
-  100% {background-image: url("images/boy.jpg");}
-}*/
-
 body {
     padding-top: 50px;
-    /*animation-name: background;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;*/
     background-image: url("images/boy.jpg");
     background-color: #cccccc;
     background-size: 100%;
@@ -19,18 +8,14 @@ body {
 /*the main div that surrounds the index page*/
 div.primary {
     width: 80%;
-    /*border: 1px solid black;*/
     padding: 25px;
     margin: auto;
     height: 2500%;
-    /*background-color: #FFFF;*/
 }
 /*24 Logo */
 .num {
-  /*border: 1px solid black;*/
   text-align: center;
   font-size: 2200%;
-  /*color: #91bed8;*/
   color: black;
 }
 
@@ -38,23 +23,17 @@ div.primary {
   text-align: center;
   padding: 5px;
   margin-top: 5em;
-  /*border: 2px solid black;*/
 }
 
 /*the main div that surrounds the index page*/
 div.primary {
     width: 71%;
-
     border: 6px solid #91bed8;
-
-    /*border: 1px solid black;*/
-
     padding: 25px;
     margin: auto;
 }
 
 .num {
-  /*border: 1px solid black;*/
   text-align: center;
   font-size: 2200%;
   color: gray;
@@ -73,8 +52,6 @@ div.primary {
   background-color: #F4F4F4;
   font-family: orator std ;
   color: #3f3f3f;
-
-
 }
 
 .bx2 {
@@ -88,21 +65,16 @@ div.primary {
   background-color: #F4F4F4;
   font-family:orator std ;
   color: #3f3f3f;
-
-
-
 }
 
 .hours {
   padding-left: 10em;
-  /*border: 1px solid black;*/
   font-size: 50px;
   letter-spacing: 18px;
   font-family: orator std ;
 }
 /*hours logo*/
 .hours{
-  /*color:#91bed8;*/
   color: gray;
 }
 /*changes the footer for the copyright*/
@@ -116,13 +88,9 @@ footer{
   color: white;
   font-family: orator std ;
 }
-
-
 footer {
   text-align: center;
 }
-
-
 
 /*Media Queries*/
 
@@ -131,7 +99,6 @@ footer {
   .num {
     display: none;
   }
-
 }
 
 /*Medium devices (tablets, 768px and up)*/
