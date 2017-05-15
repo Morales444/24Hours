@@ -1,3 +1,6 @@
+
+/*styles for the animation in the background*/
+
 @keyframes background {
   0% {background-image: url("images/boy.jpg");}
   25% {background-image: url("images/city1.jpg");}
@@ -11,5 +14,59 @@ html {
   animation-duration: 10s;
   animation-iteration-count: infinite;
   background-size:cover;
+}
 
+body {
+  background-image: none;
+}
+
+/*changes to th footer styles*/
+
+.footer {
+  color: white;
+}
+
+footer {
+  color: white;
+}
+/* Styles that came with the template and still look good*/
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100vh;
+}
+#main>.inner {
+    padding: 3rem 2.375rem;
+    max-width: 100%;
+    width: 46rem;
+}
+#text03 br+br {
+    margin-top: 1.2rem;
+}
+/*Font editing*/
+#text03 {
+    letter-spacing: 0.275rem;
+    width: calc(100% + 0.275rem);
+    font-size: 0.625em;
+    line-height: 2;
+    font-weight: 300;
+}
+h1,
+h2,
+h3,
+p {
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-family: 'Oxygen';
+    letter-spacing: 0.45rem;
+    width: calc(100% + 0.45rem);
+    font-size: 1.375em;
+    line-height: 1.375;
+    font-weight: 700;
 }

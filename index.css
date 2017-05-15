@@ -1,10 +1,10 @@
-@keyframes background {
+/*@keyframes background {
   0% {background-image: url("images/boy.jpg");}
   25% {background-image: url("images/city1.jpg");}
   50% {background-image: url("images/brick.jpg");}
   75% {background-image: url("images/watchback2.jpg");}
   100% {background-image: url("images/boy.jpg");}
-}
+}*/
 
 body {
     padding-top: 50px;
@@ -12,6 +12,7 @@ body {
     animation-duration: 10s;
     animation-iteration-count: infinite;*/
     background-image: url("images/boy.jpg");
+    background-color: #cccccc;
     background-size: 100%;
 }
 
@@ -24,11 +25,13 @@ div.primary {
     height: 2500%;
     /*background-color: #FFFF;*/
 }
-
+/*24 Logo */
 .num {
   /*border: 1px solid black;*/
   text-align: center;
   font-size: 2200%;
+  /*color: #91bed8;*/
+  color: black;
 }
 
 .bx {
@@ -41,7 +44,11 @@ div.primary {
 /*the main div that surrounds the index page*/
 div.primary {
     width: 71%;
+
+    border: 6px solid #91bed8;
+
     /*border: 1px solid black;*/
+
     padding: 25px;
     margin: auto;
 }
@@ -50,6 +57,7 @@ div.primary {
   /*border: 1px solid black;*/
   text-align: center;
   font-size: 2200%;
+  color: gray;
 }
 
 /*the css for the 4 boxes linking to the 4 product pages;*/
@@ -58,31 +66,114 @@ div.primary {
   padding: 5px;
   margin-top: .2em;
   padding-top: 45px;
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 1em;
-  border: 2px solid black;
+  border: 2px solid #91bed8;
   height: 5em;
   background-color: #F4F4F4;
+  font-family: orator std ;
+  color: #3f3f3f;
+
+
 }
 
 .bx2 {
   text-align: center;
   padding: 5px;
   padding-top: 45px;
-  font-size: 30px;
+  font-size: 25px;
   margin-top: 1em;
-  border: 2px solid black;
+  border: 2px solid #91bed8;
   height: 5em;
-  background-color:  #F4F4F4;
-}
+  background-color: #F4F4F4;
+  font-family:orator std ;
+  color: #3f3f3f;
 
-a {
-  color: black;
+
+
 }
 
 .hours {
-  padding-left: 11em;
+  padding-left: 10em;
   /*border: 1px solid black;*/
   font-size: 50px;
-  letter-spacing: 15px;
+  letter-spacing: 18px;
+  font-family: orator std ;
+}
+/*hours logo*/
+.hours{
+  /*color:#91bed8;*/
+  color: gray;
+}
+/*changes the footer for the copyright*/
+footer{
+  color: white;
+  font-family: orator std ;
+  letter-spacing: 8px;
+}
+/*changes the color of the about us and contact us linkes*/
+.footer {
+  color: white;
+  font-family: orator std ;
+}
+
+
+footer {
+  text-align: center;
+}
+
+
+
+/*Media Queries*/
+
+/*Extra small devices*/
+@media (max-width: 500px) {
+  .num {
+    display: none;
+  }
+
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (max-width: 990px) {
+  .hours {
+    display: none;
+  }
+  .num {
+    font-size: 1500%;
+  }
+  body {
+    background-image: none;
+    background-color: #36454f;
+  }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (max-width: 1290px) {
+  .hours {
+    margin-left: 3em;
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 1156px) {
+  .hours {
+    font-size: 33px;
+  }
+}
+
+@media (max-width: 1108px) {
+  .hours {
+    font-size: 28.5px;
+  }
+  .num {
+    font-size: 1900%;
+  }
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (max-width: 1350px) {
+  .hours {
+    padding-left: 9.1em;
+  }
 }
