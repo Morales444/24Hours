@@ -1,21 +1,24 @@
-
 /*start of basic CSS */
-body{
-  background-image: url("images/city1.jpg");
-  background-size: 100%;
+
+body {
+    background-image: url("images/city1.jpg");
+    background-size: 100%;
 }
+
 .slide-image {
     width: 100%;
 }
+
 .carousel-holder {
     margin-bottom: 30px;
 }
-.list-group {
-  font-family: orator std;
-  letter-spacing: 8px;
-  font-size: 15px;
 
+.list-group {
+    font-family: orator std;
+    letter-spacing: 8px;
+    font-size: 15px;
 }
+
 .carousel-control, .item {
     border-radius: 4px;
 }
@@ -23,7 +26,6 @@ body{
 .caption {
     height: 130px;
     overflow: hidden;
-
 }
 
 .caption h4 {
@@ -51,21 +53,28 @@ body{
     color: #333;
 }
 
+
 /*End of basic CSS*/
 
+
 /*changes the footer for the copyright*/
-footer{
-  font-family: orator std ;
-  letter-spacing: 8px;
+
+footer {
+    font-family: orator std;
+    letter-spacing: 8px;
 }
+
+
 /*changes the color of the about us and contact us linkes*/
+
 .footer {
-  font-family: orator std ;
-  text-decoration: none;
+    font-family: orator std;
+    text-decoration: none;
 }
 
 
 /*the main div that surrounds the index page*/
+
 div.primary {
     width: 80%;
     padding: 25px;
@@ -73,33 +82,33 @@ div.primary {
 }
 
 .num {
-  text-align: center;
-  font-size: 2200%;
+    text-align: center;
+    font-size: 2200%;
 }
 
 footer {
-  display: block;
-  padding-top: 25px;
-  text-align: center;
-  color: white;
+    display: block;
+    padding-top: 25px;
+    text-align: center;
+    color: white;
 }
 
 a.footer {
-  border-left: 1px solid gray;
-  padding-left: 10px;
-  color: white
+    border-left: 1px solid gray;
+    padding-left: 10px;
+    color: white
 }
 
-
 p.lead {
-  text-decoration: none;
-  color: black;
+    text-decoration: none;
+    color: black;
 }
 
 a:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
-header{
-  font-family: orator std ;
-  letter-spacing: 18px;
+
+header {
+    font-family: orator std;
+    letter-spacing: 18px;
 }
