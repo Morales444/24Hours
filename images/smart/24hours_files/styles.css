@@ -1,0 +1,141 @@
+/*
+        Capstone project
+        24Hours
+        Authors: Gisselle Morales, Mason Roberts, Marco Tapia, Denise Son
+        Date: May 15, 2017
+
+        Filename: styles.css
+*/
+
+/*start of basic CSS */
+
+body {
+    background-image: url("images/city1.jpg");
+    background-size: 100% 100%;
+
+}
+
+header {
+    font-family: orator std;
+    letter-spacing: 18px;
+}
+
+.slide-image {
+    width: 100%;
+}
+
+.carousel-holder {
+    margin-bottom: 30px;
+}
+
+.list-group {
+    font-family: orator std;
+    letter-spacing: 8px;
+    font-size: 15px;
+}
+
+.carousel-control, .item {
+    border-radius: 4px;
+}
+
+.caption {
+    height: 130px;
+    overflow: hidden;
+}
+
+.caption h4 {
+    white-space: nowrap;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+    border: 1px double black;
+}
+
+.thumbnail {
+    padding: 10px;
+    border: 2px solid gray;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+
+
+/*End of basic CSS*/
+
+
+/*the main div that surrounds the index page*/
+
+div.primary {
+    width: 80%;
+    padding: 25px;
+    margin: auto;
+}
+
+.num {
+    text-align: center;
+    font-size: 2200%;
+}
+
+/*changes the footer for the copyright*/
+
+footer {
+    font-family: orator std;
+    letter-spacing: 8px;
+}
+
+
+/*changes the color of the about us and contact us linkes*/
+
+.footer {
+    font-family: orator std;
+    text-decoration: none;
+}
+
+/*general footer styles*/
+
+footer {
+    display: block;
+    padding-top: 25px;
+    text-align: center;
+    color: white;
+}
+
+a.footer {
+    border-left: 1px solid gray;
+    padding-left: 10px;
+    color: white
+}
+
+p.lead {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/*styles the images on the product pages*/
+
+.thumbnail img {
+  width: 100%;
+  height: 250px;
+}
+
+/*media query*/
+
+@media (max-width: 995px) {
+  body {
+    background-image: none;
+    background-color: #36454f;
+  }
+}
