@@ -2,7 +2,13 @@
 
 body {
     background-image: url("images/city1.jpg");
-    background-size: 100%;
+    background-size: 100% 100%;
+
+}
+
+header {
+    font-family: orator std;
+    letter-spacing: 18px;
 }
 
 .slide-image {
@@ -57,6 +63,19 @@ body {
 /*End of basic CSS*/
 
 
+/*the main div that surrounds the index page*/
+
+div.primary {
+    width: 80%;
+    padding: 25px;
+    margin: auto;
+}
+
+.num {
+    text-align: center;
+    font-size: 2200%;
+}
+
 /*changes the footer for the copyright*/
 
 footer {
@@ -72,19 +91,7 @@ footer {
     text-decoration: none;
 }
 
-
-/*the main div that surrounds the index page*/
-
-div.primary {
-    width: 80%;
-    padding: 25px;
-    margin: auto;
-}
-
-.num {
-    text-align: center;
-    font-size: 2200%;
-}
+/*general footer styles*/
 
 footer {
     display: block;
@@ -108,13 +115,18 @@ a:hover {
     text-decoration: none;
 }
 
-header {
-    font-family: orator std;
-    letter-spacing: 18px;
-}
-
+/*styles the images on the product pages*/
 
 .thumbnail img {
   width: 100%;
-  height: 300px;
+  height: 200px;
+}
+
+/*media query*/
+
+@media (max-width: 995px) {
+  body {
+    background-image: none;
+    background-color: #36454f;
+  }
 }

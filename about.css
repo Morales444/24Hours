@@ -85,3 +85,42 @@ h1, h2, h3, p {
     line-height: 1.375;
     font-weight: 700;
 }
+
+/*media query concerning font in about page and the background*/
+
+@media (max-width: 1030px) {
+  .inner {
+    margin: auto;
+    font-size: 25px;
+  }
+
+  #text02 {
+    font-size: 50px;
+  }
+
+  #text03 {
+    font-size: 30px;
+  }
+
+  @keyframes background {
+      0% {
+          background-image: none;
+      }
+      25% {
+          background-image: none;
+      }
+      50% {
+          background-image: none;
+      }
+      75% {
+          background-image: none;
+      }
+      100% {
+          background-image: none;
+      }
+  }
+
+  body {
+    background-color: #36454f;
+  }
+}
