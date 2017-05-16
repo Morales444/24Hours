@@ -23,6 +23,10 @@ header {
     text-decoration: none;
 }
 
+.logo {
+  width: 90%;
+}
+
 body {
     padding: 20px;
 }
