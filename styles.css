@@ -103,6 +103,8 @@ footer {
 /*general footer styles*/
 
 footer {
+  /*position: fixed;
+  bottom: 0px;*/
     display: block;
     padding-top: 25px;
     text-align: center;
