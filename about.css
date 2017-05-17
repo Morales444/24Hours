@@ -28,6 +28,7 @@
 }
 .inner{
   background-color: #91bed8;
+  margin-top: 20%;
 
 }
 html {
@@ -40,7 +41,6 @@ html {
 body {
     background-image: none;
     padding-bottom: 100px;
-
 }
 
 
@@ -52,6 +52,7 @@ body {
 
 footer {
     color: white;
+
 }
 
 
@@ -106,6 +107,7 @@ h1, h2, h3, p {
   .inner {
     margin: auto;
     font-size: 25px;
+    margin-top: none;
   }
 
   #text02 {
