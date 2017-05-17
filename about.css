@@ -26,7 +26,10 @@
         background-image: url("images/boy.jpg");
     }
 }
+.inner{
+  background-color: #91bed8;
 
+}
 html {
     animation-name: background;
     animation-duration: 10s;

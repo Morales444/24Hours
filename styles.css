@@ -17,11 +17,13 @@ body {
 
 header {
     font-family: orator std;
-    letter-spacing: 18px;
+    letter-spacing: 20px;
+
 }
 
 .slide-image {
     width: 100%;
+
 }
 
 .carousel-holder {
@@ -32,19 +34,23 @@ header {
     font-family: orator std;
     letter-spacing: 8px;
     font-size: 15px;
+
 }
 
 .carousel-control, .item {
     border-radius: 4px;
+
 }
 
 .caption {
     height: 130px;
     overflow: hidden;
+    font-size: 15px;
 }
 
 .caption h4 {
     white-space: nowrap;
+
 }
 
 .thumbnail img {
@@ -54,13 +60,13 @@ header {
 .ratings {
     padding-right: 10px;
     padding-left: 10px;
-    color: #d17581;
+    color:#91bed8;
     border: 1px double black;
 }
 
 .thumbnail {
     padding: 10px;
-    border: 2px solid gray;
+    border: 5px solid #91bed8;;
 }
 
 .thumbnail .caption-full {
@@ -103,6 +109,8 @@ footer {
 /*general footer styles*/
 
 footer {
+  /*position: fixed;
+  bottom: 0px;*/
     display: block;
     padding-top: 25px;
     text-align: center;

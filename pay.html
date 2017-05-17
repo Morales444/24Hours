@@ -10,6 +10,7 @@
         Files: pay.css and pay.js
 -->
 <head>
+    <link rel="icon" href="images/logo.png">
     <meta charset="UTF-8">
     <title>Payment 24Hours</title>
     <link rel="stylesheet" href="pay.css">
@@ -35,12 +36,12 @@
 
       <!-- credit card information -->
         <div class="card-wrapper"></div>
-          <input id="column-left" type="text" name="first-name" placeholder="First Name"/>
-          <input id="column-right" type="text" name="last-name" placeholder="Surname"/>
-          <input id="input-field" type="text" name="number" placeholder="Card Number"/>
-          <input id="column-left" type="text" name="expiry" placeholder="MM / YY"/>
-          <input id="column-right" type="text" name="cvc" placeholder="CCV"/>
-          <input id="input-button" type="submit" value="Submit" />
+          <input id="column-left" type="text" name="first-name" placeholder="First Name" required="required" />
+          <input id="column-right" type="text" name="last-name" placeholder="Last Name" required="required"/>
+          <input id="input-field" type="text" name="number" placeholder="Card Number" required="required"/>
+          <input id="column-left" type="text" name="expiry" placeholder="MM / YY"required="required"/>
+          <input id="column-right" type="text" name="cvc" placeholder="CCV"required="required"/>
+          <input id="input-button" type="submit" value="Submit" required="required"/>
   </form>
 </div>
 
