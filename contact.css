@@ -35,6 +35,10 @@ span {
     display: block;
 }
 
+fieldset #message {
+    display: inline;
+}
+
 input {
     border-radius: 20px;
     border: 1px solid #91bed8;

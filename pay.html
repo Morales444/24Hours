@@ -3,42 +3,94 @@
 <!--
         Capstone project
         24Hours
-        Authors: Gisselle Morales, Mason Roberts, Marco Tapia
+        Authors: Gisselle Morales, Mason Roberts, Marco Tapia, Denise Son
         Date: May 15, 2017
 
         Filename: pay.html
-        Files: pay.css
+        Files: pay.css and pay.js
 -->
-
 <head>
-  <link rel="icon" href="images/logo.png">
-  <meta charset="UTF-8">
-  <title>Payment 24Hours</title>
-  <link rel="stylesheet" href="pay.css">
+    <link rel="icon" href="images/logo.png">
+    <meta charset="UTF-8">
+    <title>Payment 24Hours</title>
+    <link rel="stylesheet" href="pay.css">
 </head>
 
 <body>
 
   <!-- <div class="body-text">Please write your name in the name fields. Also write your card number.
   This will enable us to get your payment information and bill you accordingly</div> -->
-  <form novalidate="novalidate">
+  <form>
     <div class="form-container">
       <div class="personal-information">
         <h1>Payment Information</h1>
-      </div>
-      <!-- end of .personal-information -->
+      </div> <!-- end of .personal-information -->
 
       <!-- inputs for personal information -->
-      <input id="input-field" type="text" name="streetaddress" required="required" autocomplete="on" maxlength="45" placeholder="Street Address" />
-      <input id="column-left" type="text" name="city" required="required" autocomplete="on" maxlength="20" placeholder="City" />
-      <input id="column-right" type="text" name="zipcode" required="required" autocomplete="on" pattern="[0-9]*" maxlength="5" placeholder="ZIP code" />
-      <input id="input-field" type="email" name="email" required="required" autocomplete="on" maxlength="40" placeholder="Email" />
-      <input id="input-field" type="text" name="product" required="required" autocomplete="on" maxlength="40" placeholder="Product Name" />
+      <input id="input-field" type="text" name="city" required="required" autocomplete="on" maxlength="20" placeholder="Product Name"/>
+      <input id="input-field" type="text" name="product" required="required" autocomplete="on" maxlength="40" placeholder="Street Address"/>
+      <input id="column-left" type="text" name="city" required="required" autocomplete="on" maxlength="20" placeholder="City"/>
+      <input id="column-right" type="number" name="zipcode" required="required" autocomplete="on" pattern="[0-9]*" maxlength="5" placeholder="ZIP code"/>
+      <select id="input-field" name="state" required="required">
+         <option value="AL">AL</option>
+         <option value="AK">AK</option>
+         <option value="AZ">AZ</option>
+         <option value="AR">AR</option>
+         <option value="CA">CA</option>
+         <option value="CO">CO</option>
+         <option value="CT">CT</option>
+         <option value="DE">DE</option>
+         <option value="DC">DC</option>
+         <option value="FL">FL</option>
+         <option value="GA">GA</option>
+         <option value="HI">HI</option>
+         <option value="ID">ID</option>
+         <option value="IL">IL</option>
+         <option value="IN">IN</option>
+         <option value="IA">IA</option>
+         <option value="KS">KS</option>
+         <option value="KY">KY</option>
+         <option value="LA">LA</option>
+         <option value="ME">ME</option>
+         <option value="MD">MD</option>
+         <option value="MA">MA</option>
+         <option value="MI">MI</option>
+         <option value="MN">MN</option>
+         <option value="MS">MS</option>
+         <option value="MO">MO</option>
+         <option value="MT">MT</option>
+         <option value="NE">NE</option>
+         <option value="NV">NV</option>
+         <option value="NH">NH</option>
+         <option value="NJ">NJ</option>
+         <option value="NM">NM</option>
+         <option value="NY">NY</option>
+         <option value="NC">NC</option>
+         <option value="ND">ND</option>
+         <option value="OH">OH</option>
+         <option value="OK">OK</option>
+         <option value="OR">OR</option>
+         <option value="PA">PA</option>
+         <option value="RI">RI</option>
+         <option value="SC">SC</option>
+         <option value="SD">SD</option>
+         <option value="TN">TN</option>
+         <option value="TX">TX</option>
+         <option value="UT">UT</option>
+         <option value="VT">VT</option>
+         <option value="VA">VA</option>
+         <option value="WA">WA</option>
+         <option value="WV">WV</option>
+         <option value="WI">WI</option>
+         <option value="WY">WY</option>
+      </select>
+      <input id="input-field" type="email" name="email" required="required" autocomplete="on" maxlength="40" placeholder="Email"/>
 
 
       <!-- credit card information -->
+
       <div id="cards" class="inline">
-        <label> Card Type:      </label> 
+        <label> Card Type:</label>
          <input id="visa" name="PaymentType" type="radio" value="Visa" />
          <label for="visa">Visa</label>
          <input id="mc" name="PaymentType" type="radio" value="MC" />
@@ -53,18 +105,22 @@
       <input id="input-field" type="number" name="number" placeholder="Card Number" required="required" />
       <input id="column-left" type="number" name="expiry" placeholder="MM / YY" required="required" />
       <input id="column-right" type="number" name="cvc" placeholder="CCV" required="required" />
+      <input id="confirm" name="confirm" type="checkbox" />
+      <label for="confirm">Confirm that all the information above is accurate</label>
       <input id="input-button" type="submit" value="Submit" required="required" />
   </form>
-  </div>
+</div>
 
-  <!-- begining of footer element -->
-  <footer>
-    <hr /> Copyright &copy; 2017 24Hours, All Rights Reserved.
-    <a href="index.html" class="footer">Home</a>
-    <a href="contact.html" class="footer">Contact Us</a>
-    <a href="about.html" class="footer">About Us</a>
-  </footer>
+<!-- begining of footer element -->
+<footer>
+  <hr />
+  Copyright &copy; 2017 24Hours, All Rights Reserved.
+  <a href="index.html" class="footer">Home</a>
+  <a href="contact.html" class="footer">Contact Us</a>
+  <a href="about.html" class="footer">About Us</a>
+</footer>
 
+<!-- all script tags -->
 
 
 </body>
