@@ -88,6 +88,12 @@ input[type="text"] {
     width: 97%;
     border: none;
 }
+input[type="number"] {
+    display: block;
+    height: 50px;
+    width: 97%;
+    border: none;
+}
 
 input[type="email"] {
     display: block;
@@ -98,6 +104,16 @@ input[type="email"] {
 
 
 /*credit card information styles*/
+
+div#cards {
+  background-color: #91bed8;
+  font-size: 0.9em;
+  font-family: "Roboto";
+  padding: 1%;
+  color: white;
+  text-align: center;
+  letter-spacing: 1px;
+}
 
 input[type="submit"] {
     display: block;
