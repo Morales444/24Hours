@@ -88,13 +88,24 @@
 
 
       <!-- credit card information -->
-        <div class="card-wrapper"></div>
-          <input id="column-left" type="text" name="first-name" placeholder="First Name" required="required" />
-          <input id="column-right" type="text" name="last-name" placeholder="Last Name" required="required"/>
-          <input id="input-field" type="number" name="number" placeholder="Card Number" required="required"/>
-          <input id="column-left" type="text" name="expiry" placeholder="MM / YY"required="required"/>
-          <input id="column-right" type="number" name="cvc" placeholder="CCV"required="required"/>
-          <input id="input-button" type="submit" value="Submit" required="required" />
+
+      <div id="cards" class="inline">
+        <label> Card Type:</label>
+         <input id="visa" name="PaymentType" type="radio" value="Visa" />
+         <label for="visa">Visa</label>
+         <input id="mc" name="PaymentType" type="radio" value="MC" />
+         <label for="mc">Master Card</label>
+         <input id="discover" name="PaymentType" type="radio" value="Discover" />
+         <label for="discover">Discover</label>
+         <input id="amex" name="PaymentType" type="radio" value="AmEx" />
+         <label for="amex">American Express</label>
+      </div>
+      <input id="column-left" type="text" name="first-name" placeholder="First Name" required="required" />
+      <input id="column-right" type="text" name="last-name" placeholder="Last Name" required="required" />
+      <input id="input-field" type="number" name="number" placeholder="Card Number" required="required" />
+      <input id="column-left" type="number" name="expiry" placeholder="MM / YY" required="required" />
+      <input id="column-right" type="number" name="cvc" placeholder="CCV" required="required" />
+      <input id="input-button" type="submit" value="Submit" required="required" />
   </form>
 </div>
 
