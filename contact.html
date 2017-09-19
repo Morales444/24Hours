@@ -47,19 +47,20 @@
                           <span class="email">EMAIL:</span>
                           <input type="text" name="name" value="" />
                         </label>
-                        <label>
-                           REASON FOR CONTACT:
-                            <span>Product disgruntlement</span>
-                            <input type="checkbox">
-                            <span>Employment</span>
-                            <input type="checkbox">
-                            <span>Other</span>
-                            <input type="checkbox">
-                        </label>
-                        <label for="message">
-                          <span class="message">MESSAGE:</span>
-                          <textarea name="message" rows="8" cols="55"></textarea>
-                        </label>
+                        <fieldset id="message" class="checks">
+                           <legend>Message</legend>
+                           <input id="product" name="product" type="checkbox" />
+                           <label for="product">Product disgruntlement</label>
+                           <input id="bday" name="employ" type="checkbox" />
+                           <label for="employ">Employment</label>
+                           <input id="other" name="other" type="checkbox" />
+                           <label for="other">other</label>
+                           <label for="message">
+                             <span class="message">MESSAGE:</span>
+                             <textarea name="message" rows="8" cols="55"></textarea>
+                           </label>
+                         </fieldset>
+
                         <!-- submit button -->
                         <input type="submit" name="" value="Submit" class="submit">
                     </form>
