@@ -11,7 +11,7 @@
 
 function setUpPage() {
   createEventListeners();
-  removeSelectDefaults();
+
 }
 
 function createEventListeners() {
