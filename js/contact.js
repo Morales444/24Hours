@@ -8,7 +8,7 @@
 "use strict";
 //start validation
 
-formValidity = true;
+var formValidity = true;
 
 function validateTextArea() {
     var textarea = document.querySelector("textarea");
@@ -36,11 +36,11 @@ function validateFields() {
     var fields = document.querySelectorAll("input");
     var errorMsg = document.querySelector("div");
     var fieldsetValidity;
-    var numElem = fields.length - 1;
+    var numElem = fields.length;
     var currentElem;
 
     try {
-        for (var i = 0; i < numElem - 2; i++) {
+        for (var i = 0; i < numElem - 1; i++) {
             if (fields[i].value === "") {
                 fields[i].style.background = "red";
                 fieldsetValidity = false;
@@ -65,6 +65,7 @@ function validateForm(evt) {
     } else {
         evt.returnValue = false; //stops the form from submiting=mason
     }
+    formValidity = true;
     validateFields();
     validateTextArea();
     //formValidity = true; =mason
