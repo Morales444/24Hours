@@ -53,7 +53,7 @@ function validateFields() {
             throw "please complete all fields"
         }
     } catch (msg) {
-        errorMsg.innerHTML = msg
+        errorMsg.innerHTML = msg;
         errorMsg.style.display = "block";
     }
 
