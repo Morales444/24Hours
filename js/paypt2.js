@@ -22,12 +22,13 @@ function removeSelectDefaults() {
 }
 
 function personalInformation() {
-  //GOM ~ variables 
+  //GOM ~ variables
   var inputElements = document.getElementsByTagName("input");
   var errorDiv = document.getElementById("errorText");
   var fieldsetValidity = true;
   var elementCount = inputElements.length;
   var currentElement;
+  alert(errorDiv);
 
   // GOM ~ code for the actual validation of the function
   try {
