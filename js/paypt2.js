@@ -10,7 +10,7 @@
 
 
 "use strict";
-var formValidity = true; 
+var formValidity = true;
 
 // GOM ~ makes the select boxes initially blank
 function removeSelectDefaults() {
@@ -22,7 +22,7 @@ function removeSelectDefaults() {
 }
 
 function personalInformation() {
-
+  //GOM ~ variables 
   var inputElements = document.getElementsByTagName("input");
   var errorDiv = document.getElementById("errorText");
   var fieldsetValidity = true;
