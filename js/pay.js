@@ -51,7 +51,6 @@ function personalInformation() {
   } catch (msg) {
     errorDiv.style.display = "block";
     errorDiv.innerHTML = msg;
-    errorDiv.style.color = "rgb(255, 100, 100)";
     formValidity = false;
   }
 
