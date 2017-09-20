@@ -24,9 +24,15 @@ function PersonalInformation() {
 
 }
 
+
 // creates event listeners for functions you dont necissarily want to work as soon as the page loads
 function createEventListeners() {
-
+  var submit = document.getElementsByTagName("form")[0];
+  if (submit.addEventListener) {
+    submit.addEventListener("submit", validateForm, false);
+  } else if (submit.attachEvent) {
+    submit.attachEvent("onsubmit", validateForm);
+  }
 }
 
 // GOM ~ functions will carry out as soon as the page loads

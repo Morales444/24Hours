@@ -14,7 +14,6 @@ alert("sjdkhdjk");
 function setUpPage() {
   createEventListeners();
   removeSelectDefaults();
-  alert("in setUpPage")
 }
 
 function removeSelectDefaults() {
