@@ -20,8 +20,20 @@ function removeSelectDefaults() {
   }
 }
 
-function PersonalInformation() {
+function personalInformation() {
 
+}
+
+function validateForm() {
+  // if (evt.preventfault) {
+  //   evt.preventDefault();
+  // }
+  // else {
+  //   evt.returnValue = false;
+  // }
+  // formValidity = true;
+  //
+  // personalInformation();
 }
 
 
