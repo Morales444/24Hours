@@ -8,13 +8,14 @@
 
 */
 
-/*
-   Start of Gisselle's Section: Top of Payment Inforation
-*/
 
-/*
-   End of Gisselle's Section: Top of Payment Inforation 
-*/
+   //Start of Gisselle's Section: Top of Payment Inforation
+
+
+
+
+
+    //End of Gisselle's Section: Top of Payment Inforation 
 
 /*=========================================================================//
 Start-- Marco's Section: Payment Information, Bottom half of Payment Page
