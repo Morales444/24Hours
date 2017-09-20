@@ -7,24 +7,23 @@
     file: pay.js
 
 */
+
+
 "use strict";
 
-function setUpPage() {
-  createEventListeners();
 
-}
+
+
 
 function createEventListeners() {
 
 }
 
+function setUpPage() {
+  createEventListeners();
+}
 
-
-
-
-
-
-
+// GOM ~ Loads the functions in set up page as soon as the page loads 
 if (window.addEventListener) {
   window.addEventListener("load", setUpPage, false);
 }
