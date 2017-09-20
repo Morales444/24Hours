@@ -1,8 +1,19 @@
 /*
-    pay.js
-    Form Validation
-    By: Marco, Gisselle, and Mason
 
+    Form Validation
+    Authors: Marco and Gisselle
+    Date: 9.20.17
+
+    file: pay.js
+
+*/
+
+/*
+   Start of Gisselle's Section: Top of Payment Inforation
+*/
+
+/*
+   End of Gisselle's Section: Top of Payment Inforation 
 */
 
 /*=========================================================================//
