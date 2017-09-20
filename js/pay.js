@@ -7,40 +7,23 @@
     file: pay.js
 
 */
+"use strict";
 
-/*===========================================================================
-   Start of Gisselle's Section: Top of Payment Inforation
-===========================================================================*/
-
-/*===========================================================================
-   End of Gisselle's Section: Top of Payment Inforation
-===========================================================================*/
 function setUpPage() {
-  removeSelectDefaults();
   createEventListeners();
-
+  removeSelectDefaults();
 }
-
-
-
-/*==========================================================================
-Start-- Marco's Section: Payment Information, Bottom half of Payment Page
-==========================================================================*/
-
-
-
-
-
-
-
-/*=========================================================================//
-General Code Section that will be used by evreyone
-//========================================================================*/
-
 
 function createEventListeners() {
 
 }
+
+
+
+
+
+
+
 
 if (window.addEventListener) {
   window.addEventListener("load", setUpPage, false);
