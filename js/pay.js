@@ -15,6 +15,13 @@
 /*
    End of Gisselle's Section: Top of Payment Inforation 
 */
+function setUpPage() {
+  removeSelectDefaults();
+  createEventListeners();
+
+}
+
+
 
 /*=========================================================================//
 Start-- Marco's Section: Payment Information, Bottom half of Payment Page
@@ -26,24 +33,18 @@ Start-- Marco's Section: Payment Information, Bottom half of Payment Page
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 /*=========================================================================//
 General Code Section that will be used by evreyone
 //========================================================================*/
 
+
+function createEventListeners() {
+
+}
+
 if (window.addEventListener) {
-  window.addEventListener("load", createEventListeners, false);
+  window.addEventListener("load", setUpPage, false);
 }
 else if (window.attachEvent) {
-  window.attachEvent("onload", createEventListeners);
+  window.attachEvent("onload", setUpPage);
 }
