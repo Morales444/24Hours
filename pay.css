@@ -129,6 +129,20 @@ div#cards {
   letter-spacing: 1px;
 }
 
+/*checkbox styles*/
+
+div#checkbox {
+  background-color: #91bed8;
+  font-size: 0.9em;
+  font-family: "Roboto";
+  padding: 1%;
+  color: white;
+  float: left;
+  width: 98%;
+  letter-spacing: 1px;
+}
+
+/*submit styles*/
 input[type="submit"] {
     display: block;
     height: 60px;
