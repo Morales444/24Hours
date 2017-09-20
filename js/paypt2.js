@@ -10,6 +10,7 @@
 
 
 "use strict";
+var formValidity = true; 
 
 // GOM ~ makes the select boxes initially blank
 function removeSelectDefaults() {
@@ -22,18 +23,58 @@ function removeSelectDefaults() {
 
 function personalInformation() {
 
+  var inputElements = document.getElementsByTagName("input");
+  var errorDiv = document.getElementById("errorText");
+  var fieldsetValidity = true;
+  var elementCount = inputElements.length;
+  var currentElement;
+
+  // GOM ~ code for the actual validation of the function
+  try {
+    // GOM ~ checks to see if the user put anything in each field
+    for (var i = 0; i < elementCount; i++) {
+      currentElement = inputElements[i];
+      if (currentElement.value === "") {
+        currentElement.style.background = "rgb(255, 100, 100)";
+        fieldsetValidity = false;
+      } else {
+        currentElement.style.background = "white";
+      }
+    }
+
+    if (fieldsetValidity === false) { // GOM ~ Is the error message clients see
+        throw "Please complete the indicated issues";
+    }
+    else { // GOM ~ removes error message
+      errorDiv.style.display = "none";
+      errorDiv.innerHTML = "";
+    }
+
+  } catch (msg) {
+    errorDiv.style.display = "block";
+    errorDiv.innerHTML = msg;
+    formValidity = false;
+  }
+
 }
 
-function validateForm() {
-  // if (evt.preventfault) {
-  //   evt.preventDefault();
-  // }
-  // else {
-  //   evt.returnValue = false;
-  // }
-  // formValidity = true;
-  //
-  // personalInformation();
+function validateForm(evt) {
+  // GOM ~ Prevents the form from submiting prematurely
+  if (evt.preventfault) {
+    evt.preventDefault();
+  }
+  else {
+    evt.returnValue = false;
+  }
+  formValidity = true;
+
+  personalInformation();
+
+  if (formValidity === true) { //GOM ~ form is valid
+    document.getElementById("errorText").innerHTML = "";
+    document.getElementById("errorText").style.display = "none";
+    document.getElementsByTagName("form")[0].submit();
+  }
 }
 
 
