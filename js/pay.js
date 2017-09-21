@@ -102,17 +102,23 @@ function inputs() {
 }
 
 function confirmBox() {
-  var confirmElem = document.getElementById("confirm")
+  var confirmElem = document.getElementById("confirm");
   var errorDiv = document.getElementById("errorText");
   var fieldsetValidity = true;
 
 //MT- Validation to see if the box is checked or not
   try {
     if (confirmElem.checked) {
-      confirmElem.style.background = "rgb(255, 100, 100)";
-      fieldsetValidity = false;
+      confirmElem.checked = "";
+      alert("if");
+
     } else {
-      confirmElem.style.background = "white";
+
+      confirmElem.style.outline = "rgb(255, 100, 100)";
+      fieldsetValidity = false;
+      alert("else");
+
+
     }
 
 
