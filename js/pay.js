@@ -10,6 +10,7 @@
 
 
 "use strict";
+// GOM ~ Global Variables
 var formValidity = true;
 
 // GOM ~ makes the select boxes initially blank
@@ -21,14 +22,19 @@ function removeSelectDefaults() {
   }
 }
 
-function personalInformation() {
+function select() {
+  alert("hbkjnl");
+}
+
+// GOM ~ invalidates the input elements if not filled out
+function inputs() {
   //GOM ~ variables
   var inputElements = document.getElementsByTagName("input");
   var errorDiv = document.getElementById("errorText");
   var fieldsetValidity = true;
   var elementCount = inputElements.length;
   var currentElement;
-  alert(errorDiv);
+  
 
   // GOM ~ code for the actual validation of the function
   try {
@@ -69,7 +75,8 @@ function validateForm(evt) {
   }
   formValidity = true;
 
-  personalInformation();
+  inputs();
+  select();
 
   if (formValidity === true) { //GOM ~ form is valid
     document.getElementById("errorText").innerHTML = "";
