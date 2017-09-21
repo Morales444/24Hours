@@ -23,24 +23,46 @@ function removeSelectDefaults() {
 }
 
 function select() {
-  var selectElements
-  
-  for (var i = 0; i < elementCount; i++) {
-    currentElement = selectElements[i];
-    if (currentElement.selectedIndex === -1) { //GOM ~ Error
-      currentElement.style.border = "1px solid red";
-      fieldsetValidity = false
+  var selectElement = document.getElementsByTagName("select");
+  var errorDiv = document.getElementById("errorText");
+  var fieldsetValidity = true;
+  var elementCount = selectElement.length;
+  var currentElement;
+
+  try {
+    for (var i = 0; i < elementCount; i++) {
+      currentElement = selectElement[i];
+      if (currentElement.selectedIndex === -1) { //GOM ~ Error
+        currentElement.style.border = "3px solid red";
+        fieldsetValidity = false
+      }
+      else { //GOM ~ Data is ok
+        currentElement.style.border = "";
+      }
     }
-    else { //GOM ~ Data is ok
-      currentElement.style.border = "";
+
+    if (fieldsetValidity === false) { // GOM ~ Is the error message clients see
+        throw "Please complete the indicated issues";
     }
+    else { // GOM ~ removes error message
+      errorDiv.style.display = "none";
+      errorDiv.innerHTML = "";
+
   }
+
+}
+catch (msg) {
+  errorDiv.style.display = "block";
+  errorDiv.innerHTML = msg;
+  formValidity = false;
+}
 }
 
 // GOM ~ invalidates the input elements if not filled out
 function inputs() {
   //GOM ~ variables
   var inputElements = document.getElementsByTagName("input");
+  var selectElement = document.getElementsByTagName("select");
   var errorDiv = document.getElementById("errorText");
   var fieldsetValidity = true;
   var elementCount = inputElements.length;
@@ -49,6 +71,9 @@ function inputs() {
 
   // GOM ~ code for the actual validation of the function
   try {
+
+
+
     // GOM ~ checks to see if the user put anything in each field
     for (var i = 0; i < elementCount; i++) {
       currentElement = inputElements[i];
