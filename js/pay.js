@@ -101,6 +101,42 @@ function inputs() {
 
 }
 
+function confirmBox() {
+  var confirmElem = document.getElementById("confirm")
+  var errorDiv = document.getElementById("errorText");
+  var fieldsetValidity = true;
+
+//MT- Validation to see if the box is checked or not
+  try {
+    if (confirmElem.checked) {
+      confirmElem.style.background = "rgb(255, 100, 100)";
+      fieldsetValidity = false;
+    } else {
+      confirmElem.style.background = "white";
+    }
+
+
+  if (fieldsetValidity === false) { // MT- error case
+      throw "Please complete the indicated issues";
+  }
+  else { // MT- succes case, removes error message
+    errorDiv.style.display = "none";
+    errorDiv.innerHTML = "";
+  }
+} catch (msg) {
+  errorDiv.style.display = "block";
+  errorDiv.innerHTML = msg;
+  formValidity = false;
+}
+
+}
+
+
+
+
+
+
+
 function validateForm(evt) {
   // GOM ~ Prevents the form from submiting prematurely
   if (evt.preventfault) {
@@ -113,6 +149,7 @@ function validateForm(evt) {
 
   inputs();
   select();
+  confirmBox();
 
   if (formValidity === true) { //GOM ~ form is valid
     document.getElementById("errorText").innerHTML = "";
@@ -132,13 +169,13 @@ function createEventListeners() {
   }
 }
 
-// GOM ~ functions will carry out as soon as the page loads
+// GOM ~ functions will carry out as soon as the page loads  //MT- function that allows to take call multiple functions
 function setUpPage() {
   createEventListeners();
   removeSelectDefaults();
 }
 
-// GOM ~ Loads the functions in set up page as soon as the page loads
+//MT- event listerners for when the page loads, that trigger setUpPage
 if (window.addEventListener) {
   window.addEventListener("load", setUpPage, false);
 }
