@@ -23,7 +23,18 @@ function removeSelectDefaults() {
 }
 
 function select() {
-  alert("hbkjnl");
+  var selectElements
+  
+  for (var i = 0; i < elementCount; i++) {
+    currentElement = selectElements[i];
+    if (currentElement.selectedIndex === -1) { //GOM ~ Error
+      currentElement.style.border = "1px solid red";
+      fieldsetValidity = false
+    }
+    else { //GOM ~ Data is ok
+      currentElement.style.border = "";
+    }
+  }
 }
 
 // GOM ~ invalidates the input elements if not filled out
@@ -34,7 +45,7 @@ function inputs() {
   var fieldsetValidity = true;
   var elementCount = inputElements.length;
   var currentElement;
-  
+
 
   // GOM ~ code for the actual validation of the function
   try {
