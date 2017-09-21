@@ -33,21 +33,18 @@ function cardType() {
         cards[i].style.outline = "1px solid red";
       }
       fieldsetValidity = false;
-    }
-    else { // GOM ~ takes away the CSS if alright
+    } else { // GOM ~ takes away the CSS if alright
       for (var i = 0; i < cards.length; i++) {
         cards[i].style.outline = "";
       }
     }
     if (fieldsetValidity === false) {
-        throw "Please complete the indicated issues";
-    }
-    else {
+      throw "Please complete the indicated issues";
+    } else {
       errorDiv.style.display = "none";
       errorDiv.innerHTML = "";
     }
-  }
-  catch (msg) {
+  } catch (msg) {
     errorDiv.style.display = "block";
     errorDiv.innerHTML = msg;
     formValidity = false;
@@ -71,27 +68,24 @@ function select() {
       if (currentElement.selectedIndex === -1) { //GOM ~ Error
         currentElement.style.border = "3px solid red";
         fieldsetValidity = false
-      }
-      else { //GOM ~ Data is ok
+      } else { //GOM ~ Data is ok
         currentElement.style.border = "";
       }
     }
 
     if (fieldsetValidity === false) { // GOM ~ Is the error message clients see
-        throw "Please complete the indicated issues";
-    }
-    else { // GOM ~ removes error message
+      throw "Please complete the indicated issues";
+    } else { // GOM ~ removes error message
       errorDiv.style.display = "none";
       errorDiv.innerHTML = "";
 
-  }
+    }
 
-}
-catch (msg) {
-  errorDiv.style.display = "block";
-  errorDiv.innerHTML = msg;
-  formValidity = false;
-}
+  } catch (msg) {
+    errorDiv.style.display = "block";
+    errorDiv.innerHTML = msg;
+    formValidity = false;
+  }
 }
 
 // GOM ~ invalidates the input elements if not filled out
@@ -122,9 +116,8 @@ function inputs() {
     }
 
     if (fieldsetValidity === false) { // GOM ~ Is the error message clients see
-        throw "Please complete the indicated issues";
-    }
-    else { // GOM ~ removes error message
+      throw "Please complete the indicated issues";
+    } else { // GOM ~ removes error message
       errorDiv.style.display = "none";
       errorDiv.innerHTML = "";
     }
@@ -142,31 +135,29 @@ function confirmBox() {
   var errorDiv = document.getElementById("errorText");
   var fieldsetValidity = true;
 
-//MT- Validation to see if the box is checked or not
+  //MT- Validation to see if the box is checked or not
   try {
     if (confirmElem.checked) {
         confirmElem.checked = "";
 
     } else {
       confirmElem.style.outline = "1px solid red";
+
       fieldsetValidity = false;
 
 
     }
-
-
-  if (fieldsetValidity === false) { // MT- error case
+    if (fieldsetValidity === false) { // MT- error case
       throw "Please complete the indicated issues";
+    } else { // MT- succes case, removes error message
+      errorDiv.style.display = "none";
+      errorDiv.innerHTML = "";
+    }
+  } catch (msg) {
+    errorDiv.style.display = "block";
+    errorDiv.innerHTML = msg;
+    formValidity = false;
   }
-  else { // MT- succes case, removes error message
-    errorDiv.style.display = "none";
-    errorDiv.innerHTML = "";
-  }
-} catch (msg) {
-  errorDiv.style.display = "block";
-  errorDiv.innerHTML = msg;
-  formValidity = false;
-}
 
 }
 
@@ -180,8 +171,7 @@ function validateForm(evt) {
   // GOM ~ Prevents the form from submiting prematurely
   if (evt.preventfault) {
     evt.preventDefault();
-  }
-  else {
+  } else {
     evt.returnValue = false;
   }
   formValidity = true;
@@ -218,7 +208,6 @@ function setUpPage() {
 //MT- event listerners for when the page loads, that trigger setUpPage
 if (window.addEventListener) {
   window.addEventListener("load", setUpPage, false);
-}
-else if (window.attachEvent) {
+} else if (window.attachEvent) {
   window.attachEvent("onload", setUpPage);
 }
