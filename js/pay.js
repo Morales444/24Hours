@@ -91,19 +91,14 @@ function select() {
 // GOM ~ invalidates the input elements if not filled out
 function inputs() {
   //GOM ~ variables
-  var inputElements = document.getElementsByTagName("input");
-  var selectElement = document.getElementsByTagName("select");
+  var inputElements = document.getElementsByClassName("input");
   var errorDiv = document.getElementById("errorText");
   var fieldsetValidity = true;
   var elementCount = inputElements.length;
   var currentElement;
 
-
   // GOM ~ code for the actual validation of the function
   try {
-
-
-
     // GOM ~ checks to see if the user put anything in each field
     for (var i = 0; i < elementCount; i++) {
       currentElement = inputElements[i];
@@ -127,7 +122,6 @@ function inputs() {
     errorDiv.innerHTML = msg;
     formValidity = false;
   }
-
 }
 
 function confirmBox() {
@@ -139,13 +133,10 @@ function confirmBox() {
   try {
     if (confirmElem.checked) {
         confirmElem.checked = "";
-      alert("if");
 
     } else {
       confirmElem.style.outline = "1px solid red";
-
       fieldsetValidity = false;
-      alert("else");
     }
     if (fieldsetValidity === false) { // MT- error case
       throw "Please complete the indicated issues";
