@@ -131,12 +131,14 @@ function confirmBox() {
 
   //MT- Validation to see if the box is checked or not
   try {
-    if (confirmElem.checked) {
-        confirmElem.checked = "";
+
+    if (confirmElem.checked) { //MT- succes case
+        confirmElem.checked = ""; //MT- removes the check so they have to confirm again that their data is correct
 
     } else {
       confirmElem.style.outline = "1px solid red";
       fieldsetValidity = false;
+
     }
     if (fieldsetValidity === false) { // MT- error case
       throw "Please complete the indicated issues";
