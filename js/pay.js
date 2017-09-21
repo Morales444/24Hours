@@ -56,6 +56,8 @@ function cardType() {
 
 }
 
+
+
 function select() {
   var selectElement = document.getElementsByTagName("select");
   var errorDiv = document.getElementById("errorText");
@@ -105,6 +107,9 @@ function inputs() {
 
   // GOM ~ code for the actual validation of the function
   try {
+
+
+
     // GOM ~ checks to see if the user put anything in each field
     for (var i = 0; i < elementCount; i++) {
       currentElement = inputElements[i];
@@ -140,12 +145,12 @@ function confirmBox() {
 //MT- Validation to see if the box is checked or not
   try {
     if (confirmElem.checked) {
-      confirmElem.checked = "";
+        confirmElem.checked = "";
       alert("if");
 
     } else {
 
-      confirmElem.style.outline = "rgb(255, 100, 100)";
+      confirmElem.style.outline = "1px solid red";
       fieldsetValidity = false;
       alert("else");
 
@@ -187,7 +192,7 @@ function validateForm(evt) {
   inputs();
   select();
   cardType();
-
+  confirmBox();
 
   if (formValidity === true) { //GOM ~ form is valid
     document.getElementById("errorText").innerHTML = "";
