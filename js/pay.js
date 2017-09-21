@@ -7,6 +7,8 @@
     file: pay.js
 
 */
+
+
 "use strict";
 var formValidity = true;
 
@@ -26,6 +28,7 @@ function personalInformation() {
   var fieldsetValidity = true;
   var elementCount = inputElements.length;
   var currentElement;
+  alert(errorDiv);
 
   // GOM ~ code for the actual validation of the function
   try {
@@ -93,16 +96,6 @@ function setUpPage() {
 }
 
 // GOM ~ Loads the functions in set up page as soon as the page loads
-if (window.addEventListener) {
-  window.addEventListener("load", setUpPage, false);
-}
-else if (window.attachEvent) {
-  window.attachEvent("onload", setUpPage);
-}
-
-
-
-
 if (window.addEventListener) {
   window.addEventListener("load", setUpPage, false);
 }
