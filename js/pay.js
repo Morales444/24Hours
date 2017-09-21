@@ -22,6 +22,40 @@ function removeSelectDefaults() {
   }
 }
 
+function cardType() {
+  var cards = document.getElementsByName("Payment");
+  var errorDiv = document.getElementById("errorText");
+  var fieldsetValidity = true;
+
+  try {
+    if (!cards[0].checked && !cards[1].checked && !cards[2].checked && !cards[3].checked) { // GOM ~ the error case; no radio buttons checked
+      for (var i = 0; i < cards.length; i++) {
+        cards[i].style.outline = "1px solid red";
+      }
+      fieldsetValidity = false;
+    }
+    else { // GOM ~ takes away the CSS if alright
+      for (var i = 0; i < cards.length; i++) {
+        cards[i].style.outline = "";
+      }
+    }
+    if (fieldsetValidity === false) {
+        throw "Please complete the indicated issues";
+    }
+    else {
+      errorDiv.style.display = "none";
+      errorDiv.innerHTML = "";
+    }
+  }
+  catch (msg) {
+    errorDiv.style.display = "block";
+    errorDiv.innerHTML = msg;
+    formValidity = false;
+  }
+
+
+}
+
 function select() {
   var selectElement = document.getElementsByTagName("select");
   var errorDiv = document.getElementById("errorText");
@@ -71,9 +105,6 @@ function inputs() {
 
   // GOM ~ code for the actual validation of the function
   try {
-
-
-
     // GOM ~ checks to see if the user put anything in each field
     for (var i = 0; i < elementCount; i++) {
       currentElement = inputElements[i];
@@ -113,6 +144,7 @@ function validateForm(evt) {
 
   inputs();
   select();
+  cardType();
 
   if (formValidity === true) { //GOM ~ form is valid
     document.getElementById("errorText").innerHTML = "";
