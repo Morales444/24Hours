@@ -146,13 +146,10 @@ function confirmBox() {
   try {
     if (confirmElem.checked) {
         confirmElem.checked = "";
-      alert("if");
 
     } else {
-
       confirmElem.style.outline = "1px solid red";
       fieldsetValidity = false;
-      alert("else");
 
 
     }
