@@ -130,9 +130,42 @@ function inputs() {
 
 }
 
+function validateCardNum() { //MT- Regular expression for amount of digits in card number
+  var ccNumElement = document.getElementsByName("number")[0];
+  var errorDiv = document.getElementById("errorText");
+  var fieldsetValidity = true;
+
+  //MT- Validation to see if the cvv number is 3 or 4 digits
+  try {
+    if (/^[0-9]{15,16}$/i.test(ccNumElement.value)) {
+        ccNumElement.style.outline = "";
 
 
-function validateCVV() {
+    } else {//MT- error case
+      ccNumElement.style.background = "rgb(255, 100, 100)";
+      ccNumElement.style.outline = "1px solid red";
+      ccNumElement.placeholder = "Card Number - Please enter 15-16 digits"; //specific error message in the placeholder
+      fieldsetValidity = false;
+
+
+    }
+    if (fieldsetValidity === false) { // MT- error case
+      throw "Please complete the indicated issues";
+    } else { // MT- succes case, removes error message
+      errorDiv.style.display = "none";
+      errorDiv.innerHTML = "";
+    }
+  } catch (msg) {
+    errorDiv.style.display = "block";
+    errorDiv.innerHTML = msg;
+    formValidity = false;
+  }
+
+}
+
+
+
+function validateCVV() { //MT- Regular expression for amount of digits in CVV
   var cvvElement = document.getElementsByName("cvc")[0];
   var errorDiv = document.getElementById("errorText");
   var fieldsetValidity = true;
@@ -215,6 +248,7 @@ function validateForm(evt) {
   cardType();
   confirmBox();
   validateCVV();
+  validateCardNum();
 
   if (formValidity === true) { //GOM ~ form is valid
     document.getElementById("errorText").innerHTML = "";
