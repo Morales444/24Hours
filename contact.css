@@ -13,6 +13,18 @@ body {
     padding-top: 100px;
 }
 
+/* GOM ~ error text styles*/
+#errorText {
+   display: none;
+   text-align: center;
+   padding: 10px;
+   background: #91bed8;
+   color: rgb(158, 27, 30);
+   border: 4px solid rgb(190,50,38);
+   width: 63.4%;
+   margin: auto;
+}
+
 .primary {
     width: 71%;
     border: 6px solid #91bed8;
