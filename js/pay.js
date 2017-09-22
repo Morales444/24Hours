@@ -129,39 +129,41 @@ function inputs() {
   }
 
 }
-//Attempt at RegExp
 
 
-// function validateCVV() {
-//   var cvvElement = document.getElementsByName("cvc")[0];
-//   new RegExp(/^[0-9]{3,4}$/) ;
-//   var errorDiv = document.getElementById("errorText");
-//   var fieldsetValidity = true;
-//
-//   //MT- Validation to see if the box is checked or not
-//   try {
-//     if (cvvElement === RegExp) { //MT- succes case
-//         alert("regex if")
-//     } else {//MT- error case
-//       cvvElement.style.outline = "1px solid red";
-//       fieldsetValidity = false;
-//       alert("regex else")
-//
-//
-//     }
-//     if (fieldsetValidity === false) { // MT- error case
-//       throw "Please complete the indicated issues";
-//     } else { // MT- succes case, removes error message
-//       errorDiv.style.display = "none";
-//       errorDiv.innerHTML = "";
-//     }
-//   } catch (msg) {
-//     errorDiv.style.display = "block";
-//     errorDiv.innerHTML = msg;
-//     formValidity = false;
-//   }
-//
-// }
+
+function validateCVV() {
+  var cvvElement = document.getElementsByName("cvc")[0];
+  var errorDiv = document.getElementById("errorText");
+  var fieldsetValidity = true;
+
+  //MT- Validation to see if the cvv number is 3 or 4 digits
+  try {
+    if (/^[0-9]{3,4}$/i.test(cvvElement.value)) {
+        cvvElement.style.outline = "";
+
+
+    } else {//MT- error case
+      cvvElement.style.background = "rgb(255, 100, 100)";
+      cvvElement.style.outline = "1px solid red";
+      cvvElement.placeholder = "CVV - Please enter only 3-4 digits"; //specific error message in the placeholder
+      fieldsetValidity = false;
+
+
+    }
+    if (fieldsetValidity === false) { // MT- error case
+      throw "Please complete the indicated issues";
+    } else { // MT- succes case, removes error message
+      errorDiv.style.display = "none";
+      errorDiv.innerHTML = "";
+    }
+  } catch (msg) {
+    errorDiv.style.display = "block";
+    errorDiv.innerHTML = msg;
+    formValidity = false;
+  }
+
+}
 
 function confirmBox() {
   var confirmElem = document.getElementById("confirm");
