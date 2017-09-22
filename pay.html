@@ -15,7 +15,6 @@
     <title>Payment 24Hours</title>
     <link rel="stylesheet" href="pay.css">
     <script src="js/pay.js"></script>
-    <script src="js/paypt2.js"></script>
 </head>
 
 <body>
@@ -29,10 +28,12 @@
         <h1>Payment Information</h1>
       </div> <!-- end of .personal-information -->
 
+      <!-- GOM ~ div gives a place to put the error message -->
+      <div id="errorText"></div>
       <!-- inputs for personal information -->
-      <input id="input-field" type="text" name="product" required="required" autocomplete="on" maxlength="40" placeholder="Street Address"/>
-      <input id="column-left" type="text" name="city" required="required" autocomplete="on" maxlength="20" placeholder="City"/>
-      <input id="column-right" type="number" name="zipcode" required="required" autocomplete="on" pattern="[0-9]*" maxlength="5" placeholder="ZIP code"/>
+      <input id="input-field" class="input" type="text" name="address" required="required" autocomplete="on" maxlength="40" placeholder="Street Address"/>
+      <input id="column-left" class="input" type="text" name="city" required="required" autocomplete="on" maxlength="20" placeholder="City"/>
+      <input id="column-right" class="input" type="number" name="zipcode" required="required" autocomplete="on" pattern="[0-9]*" maxlength="5" placeholder="ZIP code"/>
       <select id="input-field" name="state" required="required">
          <option value="AL">AL</option>
          <option value="AK">AK</option>
@@ -86,32 +87,32 @@
          <option value="WI">WI</option>
          <option value="WY">WY</option>
       </select>
-      <input id="input-field" type="email" name="email" required="required" autocomplete="on" maxlength="40" placeholder="Email"/>
+      <input id="input-field" class="input" type="email" name="email" required="required" autocomplete="on" maxlength="40" placeholder="Email"/>
 
 
       <!-- credit card information -->
 
       <div id="cards" >
         <label> Card Type:</label>
-         <input id="visa" name="PaymentType" type="radio" value="Visa" />
+         <input id="visa" name="Payment" type="radio" value="Visa" />
          <label for="visa">Visa</label>
-         <input id="mc" name="PaymentType" type="radio" value="MC" />
+         <input id="mc" name="Payment" type="radio" value="MC" />
          <label for="mc">Master Card</label>
-         <input id="discover" name="PaymentType" type="radio" value="Discover" />
+         <input id="discover" name="Payment" type="radio" value="Discover" />
          <label for="discover">Discover</label>
-         <input id="amex" name="PaymentType" type="radio" value="AmEx" />
+         <input id="amex" name="Payment" type="radio" value="AmEx" />
          <label for="amex">American Express</label>
       </div>
-      <input id="column-left" type="text" name="first-name" placeholder="First Name" required="required" />
-      <input id="column-right" type="text" name="last-name" placeholder="Last Name" required="required" />
-      <input id="input-field" type="number" name="number" placeholder="Card Number" required="required" />
-      <input id="column-left" type="number" name="expiry" placeholder="MM / YY" required="required" />
-      <input id="column-right" type="number" name="cvc" placeholder="CCV" required="required" />
+      <input id="column-left"  class="input" type="text" name="first-name" placeholder="First Name" required="required" />
+      <input id="column-right" class="input" type="text" name="last-name" placeholder="Last Name" required="required" />
+      <input id="input-field" class="input" type="number" name="number" placeholder="Card Number" required="required" />
+      <input id="column-left" class="input" type="number" name="expiry" placeholder="MM / YY" required="required" />
+      <input id="column-right" class="input" type="number" name="cvc" placeholder="CCV" required="required" />
       <div id="checkbox" >
         <input id="confirm" name="confirm" type="checkbox" />
         <label for="confirm">I confirm that all the information above is accurate</label>
       </div>
-      <input id="input-button" type="submit" value="Submit" required="required" />
+      <input id="input-button" name="submit" type="submit" value="Submit" required="required" />
   </form>
 </div>
 
@@ -123,8 +124,6 @@
   <a href="contact.html" class="footer">Contact Us</a>
   <a href="about.html" class="footer">About Us</a>
 </footer>
-
-<!-- all script tags -->
 
 
 </body>

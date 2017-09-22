@@ -52,6 +52,16 @@ body {
     text-align: center;
 }
 
+/* GOM ~ error text styles*/
+#errorText {
+   display: none;
+   text-align: center;
+   padding: 10px;
+   background: #91bed8;
+   color: rgb(158, 27, 30);
+   border: 4px solid rgb(190,50,38);
+}
+
 .form-container {
     width: 100%;
 }
