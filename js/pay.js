@@ -22,29 +22,29 @@ function removeSelectDefaults() {
   }
 }
 
-function cardType() {
+function cardType() { //MT- Validates the radio buttons to make sure one was checked
   var cards = document.getElementsByName("Payment");
   var errorDiv = document.getElementById("errorText");
   var fieldsetValidity = true;
 
   try {
-    if (!cards[0].checked && !cards[1].checked && !cards[2].checked && !cards[3].checked) { // GOM ~ the error case; no radio buttons checked
+    if (!cards[0].checked && !cards[1].checked && !cards[2].checked && !cards[3].checked) { //MT- the error case, no radio buttons checked
       for (var i = 0; i < cards.length; i++) {
         cards[i].style.outline = "1px solid red";
       }
       fieldsetValidity = false;
-    } else { // GOM ~ takes away the CSS if alright
+    } else { //MT- takes away the CSS if case is a success
       for (var i = 0; i < cards.length; i++) {
         cards[i].style.outline = "";
       }
     }
-    if (fieldsetValidity === false) {
+    if (fieldsetValidity === false) { //MT- throws the error message
       throw "Please complete the indicated issues";
     } else {
       errorDiv.style.display = "none";
       errorDiv.innerHTML = "";
     }
-  } catch (msg) {
+  } catch (msg) { //MT- displays the error
     errorDiv.style.display = "block";
     errorDiv.innerHTML = msg;
     formValidity = false;
@@ -91,14 +91,19 @@ function select() {
 // GOM ~ invalidates the input elements if not filled out
 function inputs() {
   //GOM ~ variables
-  var inputElements = document.getElementsByClassName("input");
+  var inputElements = document.getElementsByTagName("input");
+  var selectElement = document.getElementsByTagName("select");
   var errorDiv = document.getElementById("errorText");
   var fieldsetValidity = true;
   var elementCount = inputElements.length;
   var currentElement;
 
+
   // GOM ~ code for the actual validation of the function
   try {
+
+
+
     // GOM ~ checks to see if the user put anything in each field
     for (var i = 0; i < elementCount; i++) {
       currentElement = inputElements[i];
@@ -122,6 +127,75 @@ function inputs() {
     errorDiv.innerHTML = msg;
     formValidity = false;
   }
+
+}
+
+function validateCardNum() { //MT- Regular expression for amount of digits in card number
+  var ccNumElement = document.getElementsByName("number")[0];
+  var errorDiv = document.getElementById("errorText");
+  var fieldsetValidity = true;
+
+  //MT- Validation to see if the cvv number is 3 or 4 digits
+  try {
+    if (/^[0-9]{15,16}$/i.test(ccNumElement.value)) {
+        ccNumElement.style.outline = "";
+
+
+    } else {//MT- error case
+      ccNumElement.style.background = "rgb(255, 100, 100)";
+      ccNumElement.style.outline = "1px solid red";
+      ccNumElement.placeholder = "Card Number - Please enter 15-16 digits"; //specific error message in the placeholder
+      fieldsetValidity = false;
+
+
+    }
+    if (fieldsetValidity === false) { // MT- error case
+      throw "Please complete the indicated issues";
+    } else { // MT- succes case, removes error message
+      errorDiv.style.display = "none";
+      errorDiv.innerHTML = "";
+    }
+  } catch (msg) {
+    errorDiv.style.display = "block";
+    errorDiv.innerHTML = msg;
+    formValidity = false;
+  }
+
+}
+
+
+
+function validateCVV() { //MT- Regular expression for amount of digits in CVV
+  var cvvElement = document.getElementsByName("cvc")[0];
+  var errorDiv = document.getElementById("errorText");
+  var fieldsetValidity = true;
+
+  //MT- Validation to see if the cvv number is 3 or 4 digits
+  try {
+    if (/^[0-9]{3,4}$/i.test(cvvElement.value)) {
+        cvvElement.style.outline = "";
+
+
+    } else {//MT- error case
+      cvvElement.style.background = "rgb(255, 100, 100)";
+      cvvElement.style.outline = "1px solid red";
+      cvvElement.placeholder = "CVV - Please enter only 3-4 digits"; //specific error message in the placeholder
+      fieldsetValidity = false;
+
+
+    }
+    if (fieldsetValidity === false) { // MT- error case
+      throw "Please complete the indicated issues";
+    } else { // MT- succes case, removes error message
+      errorDiv.style.display = "none";
+      errorDiv.innerHTML = "";
+    }
+  } catch (msg) {
+    errorDiv.style.display = "block";
+    errorDiv.innerHTML = msg;
+    formValidity = false;
+  }
+
 }
 
 function confirmBox() {
@@ -131,13 +205,13 @@ function confirmBox() {
 
   //MT- Validation to see if the box is checked or not
   try {
-
     if (confirmElem.checked) { //MT- succes case
         confirmElem.checked = ""; //MT- removes the check so they have to confirm again that their data is correct
 
-    } else {
+    } else {//MT- error case
       confirmElem.style.outline = "1px solid red";
       fieldsetValidity = false;
+
 
     }
     if (fieldsetValidity === false) { // MT- error case
@@ -173,6 +247,8 @@ function validateForm(evt) {
   select();
   cardType();
   confirmBox();
+  validateCVV();
+  validateCardNum();
 
   if (formValidity === true) { //GOM ~ form is valid
     document.getElementById("errorText").innerHTML = "";
@@ -182,7 +258,7 @@ function validateForm(evt) {
 }
 
 
-// creates event listeners for functions you dont necissarily want to work as soon as the page loads
+//MT- creates event listeners for functions you dont necissarily want to work as soon as the page loads
 function createEventListeners() {
   var submit = document.getElementsByTagName("form")[0];
   if (submit.addEventListener) {
