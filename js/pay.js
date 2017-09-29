@@ -199,6 +199,39 @@ function validateCardNum() { //MT- Regular expression for amount of digits in ca
 
 }
 
+function validateExpDate() { //MT- Regular expression for expiration date
+  var expDateElement = document.getElementsByName("expiry")[0];
+  var errorDiv = document.getElementById("errorText");
+  var fieldsetValidity = true;
+
+  //MT- Validation to see if the MM/YY format is followed
+  try {
+    if (/[\d]{2}\/[\d]{2}$/i.test(expDateElement.value)) {
+        expDateElement.style.outline = "";
+
+
+    } else {//MT- error case
+      expDateElement.style.background = "rgb(255, 100, 100)";
+      expDateElement.style.outline = "2px solid red";
+      expDateElement.value = "";
+      expDateElement.placeholder = "MM/YY - Please follow the MM/YY format"; //specific error message in the placeholder
+      fieldsetValidity = false;
+
+
+    }
+    if (fieldsetValidity === false) { // MT- error case
+      throw "Please complete the indicated issues";
+    } else { // MT- succes case, removes error message
+      errorDiv.style.display = "none";
+      errorDiv.innerHTML = "";
+    }
+  } catch (msg) {
+    errorDiv.style.display = "block";
+    errorDiv.innerHTML = msg;
+    formValidity = false;
+  }
+}
+
 
 
 function validateCVV() { //MT- Regular expression for amount of digits in CVV
@@ -287,6 +320,7 @@ function validateForm(evt) {
   validateCVV();
   validateCardNum();
   validateZIP();
+  validateExpDate();
 
   if (formValidity === true) { //GOM ~ form is valid
     document.getElementById("errorText").innerHTML = "";
