@@ -130,10 +130,14 @@ function inputs() {
 
 }
 
-function validateCardNum() { //MT- Regular expression for amount of digits in card number
+function validateCardNum() { //MT- Regular expression for amount of digits in card number (WORK STILL IN PROGRESS)
   var ccNumElement = document.getElementsByName("number")[0];
   var errorDiv = document.getElementById("errorText");
   var fieldsetValidity = true;
+  var visaRegEx = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
+  var mastercardRegEx = /^(?:5[1-5][0-9]{14})$/;
+  var amexpRegEx = /^(?:3[47][0-9]{13})$/;
+  var discovRegEx = /^(?:6(?:011|5[0-9][0-9])[0-9]{12})$/;
 
   //MT- Validation to see if the cvv number is 3 or 4 digits
   try {
