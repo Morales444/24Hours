@@ -256,6 +256,9 @@ function validateForm(evt) {
     document.getElementById("errorText").style.display = "none";
     document.getElementsByTagName("form")[0].submit();
   }
+  else { // GOM ~ gets the page to go to the top when error occurs
+    scroll(0,0);
+  }
 }
 
 
