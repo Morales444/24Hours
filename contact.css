@@ -107,6 +107,7 @@ footer {
 
 /*The code for the animation in the background*/
 
+/*
 @keyframes background {
     0% {
         background-image: url("images/boy.jpg");
@@ -124,9 +125,9 @@ footer {
         background-image: url("images/boy.jpg");
     }
 }
+*/
 
 body {
-    animation-name: background;
     animation-duration: 10s;
     animation-iteration-count: infinite;
     background-size: cover;

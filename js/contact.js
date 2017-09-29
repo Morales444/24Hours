@@ -1,4 +1,3 @@
-
 /*
     Project_01_06_02
     Mason Roberts
@@ -7,6 +6,7 @@
 "use strict";
 //start validation
 var formValidity = true;
+
 function validateTextArea() {
     var textarea = document.querySelector("textarea");
     var fieldsetValidity;
@@ -27,6 +27,7 @@ function validateTextArea() {
         errorMsg.style.display = "block";
     }
 }
+
 function validateFields() {
     var fields = document.querySelectorAll("input");
     var errorMsg = document.querySelector("div");
@@ -51,6 +52,7 @@ function validateFields() {
         errorMsg.style.display = "block";
     }
 }
+
 function validateForm(evt) {
     if (evt.preventDefault) {
         evt.preventDefault(); //stops the default sumbit=mason
@@ -65,7 +67,9 @@ function validateForm(evt) {
         document.getElementsByTagName("form")[0].submit();
     }
 }
+
 function setupContact() { //seting up the event listeners =mason
+    switchBackground();
     var submit = document.getElementsByClassName('submit')[0]; //get the submit button =mason
     if (submit.addEventListener) {
         submit.addEventListener("click", validateForm, false);
@@ -79,3 +83,17 @@ if (window.addEventListener) {
 } else if (window.attachEvent) {
     window.attachEvent("onload", setupContact);
 }
+
+var backgroundArray = ["url('images/boy.jpg')", "url('images/city1.jpg')", "url('images/brick.jpg')", "url('images/watchback2.jpg')", "url('images/boy.jpg')"];
+console.log(backgroundArray);
+function switchBackground() {
+    var i=0;
+    setInterval(function () {
+        i++;
+        document.body.style.background = backgroundArray[i];
+        if(i === 4){
+            i = 0;
+        }
+    }, 1000)
+}
+
