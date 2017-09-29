@@ -91,7 +91,7 @@ function select() {
 // GOM ~ invalidates the input elements if not filled out
 function inputs() {
   //GOM ~ variables
-  var inputElements = document.getElementsByTagName("input");
+  var inputElements = document.getElementsByClassName("input");
   var selectElement = document.getElementsByTagName("select");
   var errorDiv = document.getElementById("errorText");
   var fieldsetValidity = true;
@@ -101,9 +101,6 @@ function inputs() {
 
   // GOM ~ code for the actual validation of the function
   try {
-
-
-
     // GOM ~ checks to see if the user put anything in each field
     for (var i = 0; i < elementCount; i++) {
       currentElement = inputElements[i];
@@ -130,10 +127,48 @@ function inputs() {
 
 }
 
-function validateCardNum() { //MT- Regular expression for amount of digits in card number
+
+function validateZIP() { //MT- Regular expression for amount of digits in ZIP code
+  var zipElement = document.getElementsByName("zipcode")[0];
+  var errorDiv = document.getElementById("errorText");
+  var fieldsetValidity = true;
+
+  //MT- Validation to see if the zip code is 5 numbers long
+  try {
+    if (/^[0-9]{5}$/i.test(zipElement.value)) {
+        zipElement.style.outline = "";
+
+
+    } else {//MT- error case
+      zipElement.style.background = "rgb(255, 100, 100)";
+      zipElement.style.outline = "2px solid red";
+      zipElement.value = "";
+      zipElement.placeholder = "ZIP code - Please enter only 5 digits"; //specific error message in the placeholder
+      fieldsetValidity = false;
+
+
+    }
+    if (fieldsetValidity === false) { // MT- error case
+      throw "Please complete the indicated issues";
+    } else { // MT- succes case, removes error message
+      errorDiv.style.display = "none";
+      errorDiv.innerHTML = "";
+    }
+  } catch (msg) {
+    errorDiv.style.display = "block";
+    errorDiv.innerHTML = msg;
+    formValidity = false;
+  }
+}
+
+function validateCardNum() { //MT- Regular expression for amount of digits in card number (WORK STILL IN PROGRESS)
   var ccNumElement = document.getElementsByName("number")[0];
   var errorDiv = document.getElementById("errorText");
   var fieldsetValidity = true;
+  var visaRegEx = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
+  var mastercardRegEx = /^(?:5[1-5][0-9]{14})$/;
+  var amexpRegEx = /^(?:3[47][0-9]{13})$/;
+  var discovRegEx = /^(?:6(?:011|5[0-9][0-9])[0-9]{12})$/;
 
   //MT- Validation to see if the cvv number is 3 or 4 digits
   try {
@@ -143,7 +178,8 @@ function validateCardNum() { //MT- Regular expression for amount of digits in ca
 
     } else {//MT- error case
       ccNumElement.style.background = "rgb(255, 100, 100)";
-      ccNumElement.style.outline = "1px solid red";
+      ccNumElement.style.outline = "2px solid red";
+      ccNumElement.value = "";
       ccNumElement.placeholder = "Card Number - Please enter 15-16 digits"; //specific error message in the placeholder
       fieldsetValidity = false;
 
@@ -178,7 +214,8 @@ function validateCVV() { //MT- Regular expression for amount of digits in CVV
 
     } else {//MT- error case
       cvvElement.style.background = "rgb(255, 100, 100)";
-      cvvElement.style.outline = "1px solid red";
+      cvvElement.style.outline = "2px solid red";
+      cvvElement.value = "";
       cvvElement.placeholder = "CVV - Please enter only 3-4 digits"; //specific error message in the placeholder
       fieldsetValidity = false;
 
@@ -236,7 +273,7 @@ function confirmBox() {
 
 function validateForm(evt) {
   // GOM ~ Prevents the form from submiting prematurely
-  if (evt.preventfault) {
+  if (evt.preventDefault) {
     evt.preventDefault();
   } else {
     evt.returnValue = false;
@@ -249,11 +286,15 @@ function validateForm(evt) {
   confirmBox();
   validateCVV();
   validateCardNum();
+  validateZIP();
 
   if (formValidity === true) { //GOM ~ form is valid
     document.getElementById("errorText").innerHTML = "";
     document.getElementById("errorText").style.display = "none";
     document.getElementsByTagName("form")[0].submit();
+  }
+  else { // GOM ~ gets the page to go to the top when error occurs
+    scroll(0,0);
   }
 }
 
