@@ -91,7 +91,7 @@ function select() {
 // GOM ~ invalidates the input elements if not filled out
 function inputs() {
   //GOM ~ variables
-  var inputElements = document.getElementsByTagName("input");
+  var inputElements = document.getElementsByClassName("input");
   var selectElement = document.getElementsByTagName("select");
   var errorDiv = document.getElementById("errorText");
   var fieldsetValidity = true;
@@ -101,9 +101,6 @@ function inputs() {
 
   // GOM ~ code for the actual validation of the function
   try {
-
-
-
     // GOM ~ checks to see if the user put anything in each field
     for (var i = 0; i < elementCount; i++) {
       currentElement = inputElements[i];
